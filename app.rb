@@ -47,3 +47,12 @@ post '/fav_color' do
   first_name = params[:fname]
   redirect '/lucky_number_one?fname=' + first_name + '&lname=' + last_name + '&age=' + age + '&fav_color=' + fav_color
 end
+
+
+get '/lucky_number_one' do
+  fav_color = params[:fav_color]
+  age = params[:age]
+  last_name = params[:lname]
+  first_name = params[:fname]
+  erb :lucky_number_one, locals: {last_name: last_name, first_name: first_name, age: age, fav_color: fav_color}
+end
