@@ -1,1 +1,10 @@
 And your favorite color is <%= fav_color %>, what is your first lucky number?
+
+<form method = 'post' action = '/lucky_number_one'>
+  First Lucky Number: <input type="text" name="lucky_number_one"><br>
+  <input type = "hidden" name = "fav_color" value = "<%= fav_color %>">
+  <input type = "hidden" name = "age" value = "<%= age %>">
+  <input type = "hidden" name = "fname" value = "<%= first_name %>">
+  <input type = "hidden" name = "lname" value = "<%= last_name %>">
+  <input type="submit" value="Submit">
+</form>
