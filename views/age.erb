@@ -1,1 +1,8 @@
-<%= first_name %> <%= last_name %>
+Okay, <%= first_name %> <%= last_name %>, what is your age?
+
+<form method = 'post' action = '/age'>
+  Age: <input type="text" name="age"><br>
+  <input type = "hidden" name = "fname" value = "<%= first_name %>">
+  <input type = "hidden" name = "lname" value = "<%= last_name %>">
+  <input type="submit" value="Submit">
+</form>
