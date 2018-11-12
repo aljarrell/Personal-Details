@@ -1,0 +1,7 @@
+Hi, <%= first_name %> can I get your last name
+
+<form method = 'post' action = '/last_name'>
+  Last name: <input type="text" name="lname"><br>
+  <input type = "hidden" name = "fname" value = "<%= first_name %>">
+  <input type="submit" value="Submit">
+</form>
