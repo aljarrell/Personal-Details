@@ -1,1 +1,12 @@
 Your second lucky number is <%= lucky_number_two %>.  Do you have a third lucky number?
+
+<form method = 'post' action = '/lucky_number_three'>
+  Third Lucky Number: <input type = "text" name = "lucky_number_three"><br>
+  <input type = "hidden" name = "lucky_number_two" value="<%= lucky_number_two %>">
+  <input type = "hidden" name = "lucky_number_one" = "<%= lucky_number_one %>">
+  <input type = "hidden" name = "fav_color" value = "<%= fav_color %>">
+  <input type = "hidden" name = "age" value = "<%= age %>">
+  <input type = "hidden" name = "fname" value = "<%= first_name %>">
+  <input type = "hidden" name = "lname" value = "<%= last_name %>">
+  <input type="submit" value="Submit">
+</form>
