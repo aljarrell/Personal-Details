@@ -117,3 +117,15 @@ get '/fav_pet' do
   first_name = params[:fname]
   erb :fav_pet, locals: {last_name: last_name, first_name: first_name, age: age, fav_color: fav_color, lucky_number_one: lucky_number_one, lucky_number_two: lucky_number_two, lucky_number_three: lucky_number_three}
 end
+
+post '/fav_pet' do
+  fav_pet = params[:fav_pet]
+  lucky_number_three = params[:lucky_number_three]
+  lucky_number_two = params[:lucky_number_two]
+  lucky_number_one = params[:lucky_number_one]
+  fav_color = params[:fav_color]
+  age = params[:age]
+  last_name = params[:lname]
+  first_name = params[:fname]
+  redirect '/final_results?fname=' + first_name + '&lname=' + last_name + '&age=' + age + '&fav_color=' + fav_color + '&lucky_number_one=' + lucky_number_one + '&lucky_number_two=' + lucky_number_two + '&lucky_number_three=' + lucky_number_three + '&fav_pet=' + fav_pet
+end
