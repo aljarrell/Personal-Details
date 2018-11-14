@@ -1,3 +1,3 @@
-def multiply(numone, numtwo)
-    numone * numtwo
+def multiply(numone, numtwo, numthree)
+    numone * numtwo * numthree
 end

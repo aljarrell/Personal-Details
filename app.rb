@@ -1,5 +1,7 @@
 require 'sinatra'
 require_relative 'addition.rb'
+require_relative 'multiplication.rb'
+require_relative 'subtraction.rb'
 
 get '/' do
   erb :name
@@ -140,6 +142,7 @@ get '/final_results' do
   age = params[:age]
   last_name = params[:lname]
   first_name = params[:fname]
-  total = add(lucky_number_one, lucky_number_two, lucky_number_three)
-  erb :final_results, locals: {last_name: last_name, first_name: first_name, age: age, fav_color: fav_color, lucky_number_one: lucky_number_one, lucky_number_two: lucky_number_two, lucky_number_three: lucky_number_three, fav_pet: fav_pet, total: total}
+  add_total = add(lucky_number_one, lucky_number_two, lucky_number_three)
+  multiply_total = multiply(lucky_number_one, lucky_number_two, lucky_number_three)
+  erb :final_results, locals: {last_name: last_name, first_name: first_name, age: age, fav_color: fav_color, lucky_number_one: lucky_number_one, lucky_number_two: lucky_number_two, lucky_number_three: lucky_number_three, fav_pet: fav_pet, add_total: add_total, multiply_total: multiply_total}
 end
