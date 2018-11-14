@@ -1,0 +1,13 @@
+Your third lucky number is <%= lucky_number_three %>. Enough numbers, what is your favorite pet?
+
+<form method = 'post' action = '/fav_pet'>
+  Favorite Pet: <input type = "text" name = "fav_pet"><br>
+  <input type = "hidden" name = "lucky_number_three" value = "<%= lucky_number_three %>">
+  <input type = "hidden" name = "lucky_number_two" value = "<%= lucky_number_two %>">
+  <input type = "hidden" name = "lucky_number_one" = "<%= lucky_number_one %>">
+  <input type = "hidden" name = "fav_color" value = "<%= fav_color %>">
+  <input type = "hidden" name = "age" value = "<%= age %>">
+  <input type = "hidden" name = "fname" value = "<%= first_name %>">
+  <input type = "hidden" name = "lname" value = "<%= last_name %>">
+  <input type="submit" value="Submit">
+</form>
