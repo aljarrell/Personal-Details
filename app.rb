@@ -84,3 +84,8 @@ post '/lucky_number_two' do
   first_name = params[:fname]
   redirect '/lucky_number_three?fname=' + first_name + '&lname=' + last_name + '&age=' + age + '&fav_color=' + fav_color + '&lucky_number_one=' + lucky_number_one + '&lucky_number_two=' + lucky_number_two
 end
+
+get '/lucky_number_three' do
+
+
+end 

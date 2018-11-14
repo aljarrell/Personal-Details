@@ -2,7 +2,7 @@ Oh, <%= lucky_number_one %> is an excellent number! Do you have a second lucky n
 
 <form method = 'post' action = '/lucky_number_two'>
   Second Lucky Number: <input type = "text" name = "lucky_number_two"><br>
-  <input type = "hidden" name = "lucky_number_one" = <%= lucky_number_one %>
+  <input type = "hidden" name = "lucky_number_one" = "<%= lucky_number_one %>">
   <input type = "hidden" name = "fav_color" value = "<%= fav_color %>">
   <input type = "hidden" name = "age" value = "<%= age %>">
   <input type = "hidden" name = "fname" value = "<%= first_name %>">
