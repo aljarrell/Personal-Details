@@ -74,3 +74,13 @@ get '/lucky_number_two' do
   first_name = params[:fname]
   erb :lucky_number_two, locals: {last_name: last_name, first_name: first_name, age: age, fav_color: fav_color, lucky_number_one: lucky_number_one}
 end
+
+post '/lucky_number_two' do
+  lucky_number_two = params[:lucky_number_two]
+  lucky_number_one = params[:lucky_number_one]
+  fav_color = params[:fav_color]
+  age = params[:age]
+  last_name = params[:lname]
+  first_name = params[:fname]
+  redirect '/lucky_number_three?fname=' + first_name + '&lname=' + last_name + '&age=' + age + '&fav_color=' + fav_color + '&lucky_number_one=' + lucky_number_one + '&lucky_number_two=' + lucky_number_two
+end
